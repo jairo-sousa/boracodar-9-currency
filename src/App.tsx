@@ -1,7 +1,13 @@
+import { AppWrapper } from "./components/AppWrapper";
+import { CurrencyConverter } from "./components/CurrencyConverter";
+import { ExchangeRate } from "./components/ExchangeRate";
+
 export function App() {
 	return (
-		<div className="App">
-			<h1>TODO APP</h1>
-		</div>
+		<AppWrapper>
+			<CurrencyConverter />
+
+			<ExchangeRate />
+		</AppWrapper>
 	);
 }
