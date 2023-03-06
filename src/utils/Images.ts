@@ -10,3 +10,4 @@ export const flags = {
 	CHF: `${baseImagePath}CHF.svg`,
 	JPY: `${baseImagePath}JPY.svg`,
 };
+export const chart = `${baseImagePath}chart.svg`;
