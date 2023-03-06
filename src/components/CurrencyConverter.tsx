@@ -11,7 +11,7 @@ export function CurrencyConverter() {
 			<ContainerWrapper title="Currency converter">
 				<Flex justify="space-between">
 					<ConvertingIO />
-					<Img src={direction}></Img>
+					<Img src={direction} w="1.8rem"></Img>
 					<ConvertingIO />
 				</Flex>
 			</ContainerWrapper>
