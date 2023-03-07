@@ -1,7 +1,8 @@
-import { Flex, Input, Text, Image } from "@chakra-ui/react";
+import { Flex, Input, Image, Text } from "@chakra-ui/react";
 
-import { downArrow, flags } from "../utils/Images";
+import { CurrencySelect } from "./CurrencySelect";
 import { Divider } from "./Divider";
+import { downArrow, flags } from "../utils/Images";
 
 export function ConvertingIO() {
 	return (
@@ -15,13 +16,10 @@ export function ConvertingIO() {
 				border: "0.15rem solid #7C3AED",
 			}}
 		>
-			<Input
-				w="16.2rem"
-				h="100%"
-				border="none"
-				fontSize="1.6rem"
-				borderRadius="0.8rem 0 0 0.8rem"
-			/>
+			<Flex w="16.2rem" align="center" gap="0.8rem">
+				<Text ml="1.6rem">R$</Text>
+				<Input border="none" fontSize="1.6rem" borderRadius="0" p="0" />
+			</Flex>
 			<Flex
 				w="13rem"
 				h="100%"
@@ -29,14 +27,17 @@ export function ConvertingIO() {
 				borderRadius="0 0.8rem 0.8rem 0"
 				justify="center"
 				align="center"
-				gap="0.8rem"
 				pos="relative"
 				cursor="pointer"
+				gap="0.8rem"
 			>
 				<Divider />
+
 				<Image src={flags.USD} alt="usd flag" />
-				<Text>USD</Text>
-				{downArrow && <Image src={downArrow} alt="downArrow" />}
+
+				<CurrencySelect />
+
+				<Image src={downArrow} alt="downArrow" />
 			</Flex>
 		</Flex>
 	);
