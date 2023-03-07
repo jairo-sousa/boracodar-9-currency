@@ -1,5 +1,4 @@
 <h1 align="center"> CURRENCY CONVERTER </h1>
-<p align="center">IN PRODUCTION</p>
 
 <a align="center" href="https://gleaming-sprinkles-e9e73d.netlify.app/">
   <img alt="App preview" src="./.github/preview.svg">
