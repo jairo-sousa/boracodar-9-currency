@@ -3,8 +3,11 @@ import { Flex, Input, Image, Text } from "@chakra-ui/react";
 import { CurrencySelect } from "./CurrencySelect";
 import { Divider } from "./Divider";
 import { downArrow, flags } from "../utils/Images";
+import { useState } from "react";
 
 export function ConvertingIO() {
+	const [optionsOpen, setoptionsOpen] = useState(false);
+
 	return (
 		<Flex
 			h="5.6rem"
@@ -14,6 +17,9 @@ export function ConvertingIO() {
 			align="center"
 			_focusWithin={{
 				border: "0.15rem solid #7C3AED",
+			}}
+			onClick={() => {
+				setoptionsOpen(!optionsOpen);
 			}}
 		>
 			<Flex w="16.2rem" align="center" gap="0.8rem">
@@ -35,7 +41,7 @@ export function ConvertingIO() {
 
 				<Image src={flags.USD} alt="usd flag" />
 
-				<CurrencySelect />
+				<CurrencySelect isOpen={optionsOpen} />
 
 				<Image src={downArrow} alt="downArrow" />
 			</Flex>
